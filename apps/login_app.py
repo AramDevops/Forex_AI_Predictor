@@ -21,11 +21,11 @@ class LoginApp(HydraHeadApp):
         Application entry point.
         """
 
-        st.markdown("<h1 style='text-align: center;'>Secure Hydralit Login</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>Secure Forex App Login</h1>", unsafe_allow_html=True)
 
         c1,c2,c3, = st.columns([2,2,2])
-        c3.image("./resources/lock.png",width=100,)
-        c3.image("./resources/hydra.png",width=100,)
+        #c3.image("./resources/lock.png",width=100,)
+        #c3.image("./resources/hydra.png",width=100,)
 
         form_data = self._create_login_form(c2)
 

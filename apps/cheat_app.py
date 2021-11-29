@@ -81,8 +81,10 @@ class CheatApp(HydraHeadApp):
             for k in time_series_dict_to_forecast.keys():
                 forecast = predictions(time_series_dict_to_forecast[k])
 
-                m = max((forecast['currency'] - 0.0002) * AMOUNT)
-                l = min((forecast['currency'] - 0.0002) * AMOUNT)
+                error = 0.0100
+
+                m = max((forecast['currency'] - error) * AMOUNT)
+                l = min((forecast['currency'] - error) * AMOUNT)
 
                 pr = ((m-l)/((m+l)/2))*100
                 npr = -1*pr
@@ -93,10 +95,10 @@ class CheatApp(HydraHeadApp):
                     f"Value of {BASE}'s to {SIGNS_DESCRIPTIONS[k]}")
                 colx, coly = st.columns([3, 1])
                 with colx:
-                    st.line_chart((forecast['currency']-0.0002)*AMOUNT)
+                    st.line_chart((forecast['currency'] - error)*AMOUNT)
                 with coly:
-                    st.write((forecast['currency']-0.0002)*AMOUNT)
-
+                    st.write((forecast['currency'] - error)*AMOUNT)
+                                    
         except ValueError as e:
             st.success(
                 f" Feed the AI data to get accurate predictions"
