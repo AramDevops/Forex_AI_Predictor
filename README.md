@@ -12,7 +12,7 @@ Here some predictions results :
 
 <img src="./screenpic1.png" />
 
-The app support also a Live Market Currency Chart and some quick information and news:
+The app support also a Live Market Currency Chart and some quick informations and news:
 
 <img src="./screenpic2.png" />
 
