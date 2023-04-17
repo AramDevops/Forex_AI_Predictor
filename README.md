@@ -6,7 +6,7 @@ It is easy to use :
 2 - Pick an amount to be converted
 3 - Pick your Data Pool (a higher data volume = more precision but more calculation time)
 
-<img src="./screenpic.png" />
+<img src="./screenpic0.png" />
 
 Here some predictions results : 
 
